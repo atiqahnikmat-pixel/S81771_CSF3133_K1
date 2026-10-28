@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMTECH Event 2026</title>
+</head>
+<body>
+
+    <!-- Header: Event name and tagline -->
+    <header>
+        <h1>COMTECH Event 2026</h1>
+        <p>Connecting Technology, Creativity and Innovation.</p>
+    </header>
+
+    <!-- Navigation: Links to each section -->
+    <nav>
+        <a href="#about">About the Event</a> |
+        <a href="#schedule">Event Schedule</a> |
+        <a href="#register">Registration</a>
+    </nav>
+
+     <!-- Section 1: About the Event -->
+    <section id="about">
+        <h2>About the Event</h2>
+
+        <p>
+            COMTECH Event 2026 is a technology event organised for students
+            to explore computer technology, programming, web development
+            and digital innovation.
+        </p>
+
+        <!-- Article 1: Web Development Workshop -->
+        <article>
+            <h3>Web Development Workshop</h3>
+            <p>
+                Participants will learn the basics of HTML and how to
+                create a simple website using HTML elements.
+            </p>
+        </article>
+
+        <!-- Article 2: Computer Technology Talk -->
+        <article>
+            <h3>Computer Technology Talk</h3>
+            <p>
+                This session introduces students to computer technology
+                trends and career opportunities in the information
+                technology industry.
+            </p>
+        </article>
+    </section>
+
+
+     <!-- Section 2: Event Schedule Table -->
+    <section id="schedule">
+        <h2>Event Schedule</h2>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Activity</th>
+                    <th>Venue</th>
+                    <th>Person in Charge</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>8:30 AM - 9:00 AM</td>
+                    <td>Registration</td>
+                    <td>Dewan Sultan Mizan</td>
+                    <td>Organising Committee</td>
+                </tr>
+
+                <tr>
+                    <td>9:00 AM - 10:00 AM</td>
+                    <td>Opening Ceremony</td>
+                    <td rowspan="2">Dewan Sultan Mizan</td>
+                    <td>Event Director</td>
+                </tr>
+
+                <tr>
+                    <td>10:00 AM - 11:00 AM</td>
+                    <td>Computer Technology Talk</td>
+                    <td>Guest Speaker</td>
+                </tr>
+
+                <tr>
+                    <td>11:00 AM - 12:30 PM</td>
+                    <td>HTML Workshop</td>
+                    <td>MP2</td>
+                    <td>Workshop Facilitator</td>
+                </tr>
+
+                <tr>
+                    <td>12:30 PM - 2:00 PM</td>
+                    <td colspan="3">Lunch Break</td>
+                </tr>
+
+                <tr>
+                    <td>2:00 PM - 3:30 PM</td>
+                    <td>Mini Project Challenge</td>
+                    <td>MP1</td>
+                    <td>Lab Coordinator</td>
+                </tr>
+
+                <tr>
+                    <td>3:30 PM - 4:00 PM</td>
+                    <td>Prize Giving and Closing Ceremony</td>
+                    <td>Dewan Sultan Mizan</td>
+                    <td>Organising Committee</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Section 3: Student Registration Form -->
+    <section id="register">
+        <h2>Registration</h2>
+
+        <form action="register.html" method="post">
+
+            <!-- Text input: Student information -->
+            <p>
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname"
+                       name="fullname" required>
+            </p>
+
+            <p>
+                <label for="matric">Matric Number:</label>
+                <input type="text" id="matric"
+                       name="matric" required>
+            </p>
+
+            <p>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email"
+                       name="email" required>
+            </p>
+
+            <!-- Radio buttons: Year of Study -->
+            <fieldset>
+                <legend>Year of Study:</legend>
+
+                <input type="radio" id="year1"
+                       name="year" value="Year 1" required>
+                <label for="year1">Year 1</label>
+
+                <input type="radio" id="year2"
+                       name="year" value="Year 2">
+                <label for="year2">Year 2</label>
+
+                <input type="radio" id="year3"
+                       name="year" value="Year 3">
+                <label for="year3">Year 3</label>
+
+                <input type="radio" id="year4"
+                       name="year" value="Year 4">
+                <label for="year4">Year 4</label>
+            </fieldset>
+
+            <!-- Checkboxes: Select sessions to attend -->
+            <fieldset>
+                <legend>Sessions You Want to Join:</legend>
+
+                <input type="checkbox" id="web"
+                       name="sessions" value="Web Development">
+                <label for="web">Web Development Workshop</label>
+                <br>
+
+                <input type="checkbox" id="technology"
+                       name="sessions" value="Technology Talk">
+                <label for="technology">Computer Technology Talk</label>
+                <br>
+
+                <input type="checkbox" id="html"
+                       name="sessions" value="HTML Workshop">
+                <label for="html">HTML Workshop</label>
+                <br>
+
+                <input type="checkbox" id="project"
+                       name="sessions" value="Mini Project">
+                <label for="project">Mini Project Challenge</label>
+            </fieldset>
+
+            <!-- Dropdown: Programme or Faculty -->
+            <p>
+                <label for="programme">
+                    Programme or Faculty:
+                </label>
+
+                <select id="programme" name="programme" required>
+                    <option value="">
+                        -- Select Programme or Faculty --
+                    </option>
+                    <option value="Computer Science">
+                        Computer Science
+                    </option>
+                    <option value="Information Technology">
+                        Information Technology
+                    </option>
+                    <option value="Software Engineering">
+                        Software Engineering
+                    </option>
+                    <option value="Finance Mathematics">
+                        Finance Mathematics
+                    </option>
+                </select>
+            </p>
+
+            <!-- Submit button -->
+            <p>
+                <button type="submit">Submit Registration</button>
+            </p>
+
+        </form>
+    </section>
+
+    <!-- Footer: Organiser and copyright information -->
+    <footer>
+        <p>Organised by the COMTECH Organising Committee.</p>
+        <p>&copy; 2026 COMTECH Event. All rights reserved.</p>
+    </footer>
+
+    </body>
+</html>
