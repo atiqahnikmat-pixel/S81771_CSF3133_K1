@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusBake Online Order</title>
+</head>
+<body>
+
+    <!-- 1. HEADER SECTION -->
+    <div id="header">
+        <h1>CampusBake&reg;
+            <span>Freshly Baked, Just for You!</span>
+        </h1>
+        <p>Welcome to our campus bakery online ordering page.</p>
+    </div>
+
+    <!-- 2. NAVIGATION SECTION -->
+    <div id="nav">
+        <a href="#header">Home</a> |
+        <a href="#content">Order Now</a> |
+        <a href="#sidebar">Price List</a> |
+        <a href="#footer">Contact Us</a>
+    </div>
+
+    <!-- 3. CONTENT SECTION -->
+    <div id="content">
+
+        <h2>Welcome to CampusBake</h2>
+
+        <!-- Introduction using inline elements -->
+        <p>
+            At <strong>CampusBake</strong>, we prepare
+            <em>fresh and delicious</em> treats every day.
+            Choose your favourite flavour and place your order
+            <span>easily online</span>.
+            Visit our <a href="#sidebar">price list</a>
+            before ordering.
+        </p>
+
+        <h2>Online Order Form</h2>
+
+        <!-- ORDER FORM -->
+        <form action="#" method="get"
+            oninput="this.elements['total'].value =
+            (Number(this.elements['cupcakes'].value) * 3 +
+            Number(this.elements['cakeSlices'].value) * 5).toFixed(2)">
+
+            <p>
+                <label for="customerName">Customer Name:</label>
+                <input type="text"
+                    id="customerName"
+                    name="customerName"
+                    placeholder="Enter your full name"
+                    required
+                    autofocus>
+            </p>
+
+            <p>
+                <label for="phone">Phone Number:</label>
+                <input type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="e.g. 0123456789"
+                    required>
+            </p>
+
+            <p>
+                <label for="email">E-mail:</label>
+                <input type="email"
+                    id="email"
+                    name="email"
+                    placeholder="example@email.com"
+                    required>
+            </p>
+
+            <p>
+                <label for="pickupDate">Pick-up Date:</label>
+                <input type="date"
+                    id="pickupDate"
+                    name="pickupDate">
+            </p>
+
+            <p>
+                <label for="pickupTime">Pick-up Time:</label>
+                <input type="time"
+                    id="pickupTime"
+                    name="pickupTime">
+            </p>
+
+            <p>
+                <label for="flavour">Choose Flavour:</label>
+                <input type="text"
+                    id="flavour"
+                    name="flavour"
+                    list="flavourOptions"
+                    placeholder="Select or type a flavour">
+
+                <datalist id="flavourOptions">
+                    <option value="Chocolate">
+                    <option value="Vanilla">
+                    <option value="Strawberry">
+                    <option value="Red Velvet">
+                </datalist>
+            </p>
+
+            <p>
+                <label for="icingColour">Icing Colour:</label>
+                <input type="color"
+                    id="icingColour"
+                    name="icingColour"
+                    value="#ff69b4">
+            </p>
+
+            <p>
+                <label for="sweetness">
+                    Sweetness Level (1-5):
+                </label>
+
+                <input type="range"
+                    id="sweetness"
+                    name="sweetness"
+                    min="1"
+                    max="5"
+                    step="1"
+                    value="3">
+            </p>
+
+            <!-- PRICE CALCULATOR -->
+            <h3>Price Calculator</h3>
+
+            <p>
+                <label for="cupcakes">
+                    Cupcakes (RM 3.00 each):
+                </label>
+
+                <input type="number"
+                    id="cupcakes"
+                    name="cupcakes"
+                    min="0"
+                    value="0">
+            </p>
+
+            <p>
+                <label for="cakeSlices">
+                    Cake Slices (RM 5.00 each):
+                </label>
+
+                <input type="number"
+                    id="cakeSlices"
+                    name="cakeSlices"
+                    min="0"
+                    value="0">
+            </p>
+
+            <p>
+                Total Price: RM
+                <output name="total"
+                    for="cupcakes cakeSlices">0.00</output>
+            </p>
+
+            <p>
+                <button type="submit">Submit Order</button>
+                <button type="reset">Reset Form</button>
+            </p>
+
+        </form>
+    </div>
+
+    <!-- 4. SIDEBAR SECTION -->
+    <div id="sidebar">
+
+        <h2>Price List</h2>
+
+        <ul>
+            <li>Cupcake - RM&nbsp;3.00 each</li>
+            <li>Cake Slice - RM&nbsp;5.00 each</li>
+            <li>Chocolate Cake - RM&nbsp;25.00</li>
+            <li>Vanilla Cake - RM&nbsp;22.00</li>
+        </ul>
+
+        <p>Orders &gt; 10 pieces get a free drink!</p>
+
+    </div>
+
+    <!-- 5. FOOTER SECTION -->
+    <div id="footer">
+
+        <h2>Contact Us</h2>
+
+        <p>E-mail: campusbake@example.com</p>
+
+        <p>Phone: 012-3456789</p>
+
+        <p>&copy; 2026 CampusBake&reg;. All rights reserved.</p>
+
+    </div>
+
+    <!-- TESTING OBSERVATIONS:
+
+    1. When Submit Order is clicked with all required
+       fields empty, the browser prevents submission
+       and asks the user to complete the required fields.
+
+    2. When "myemail" is entered in the e-mail field,
+       the browser rejects it because it is not a valid
+       e-mail address format.
+
+    -->
+
+</body>
+</html>
