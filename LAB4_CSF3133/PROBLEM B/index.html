@@ -1,0 +1,375 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <!-- Responsive Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>e-Café Campus</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="cafe.css">
+
+    <!-- Internal CSS -->
+    <style>
+
+        /* Heading Decoration */
+        h1 {
+            text-decoration: overline;
+            text-align: center;
+            color: #073b4c;
+        }
+
+        h2 {
+            text-decoration: underline;
+            color: #1A5276;
+        }
+
+        /* Paragraph Styling */
+        p {
+            color: #333333;
+            text-align: justify;
+        }
+
+        /* Introduction Styling */
+        .intro {
+            font-size: 18px;
+            background-color: #FDEBD0;
+            padding: 15px;
+        }
+
+        /* Highlight Promotion Price */
+        .highlight {
+            font-weight: bold;
+            color: #C0392B;
+        }
+
+        /* Old Price Decoration */
+        .old-price {
+            text-decoration: line-through;
+            color: gray;
+            margin-right: 10px;
+        }
+
+        /* Video Styling */
+        video {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .caption {
+            text-align: center;
+            font-style: italic;
+            color: #555555;
+        }
+
+        /* Feedback Form Styling */
+        .feedback-form {
+            width: 90%;
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #FDEBD0;
+            border: 1px solid #D5A66A;
+            border-radius: 10px;
+        }
+
+        .feedback-form label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        .feedback-form input[type="text"],
+        .feedback-form input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #999999;
+            border-radius: 5px;
+        }
+
+        .feedback-form fieldset {
+            margin-top: 15px;
+            padding: 12px;
+        }
+
+        .feedback-form button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 15px;
+            background-color: #1A5276;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .feedback-form button:hover {
+            background-color: #E67E22;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #073b4c;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            color: white;
+            text-align: center;
+        }
+
+        footer address {
+            font-style: normal;
+        }
+
+        /* Responsive Layout */
+        @media (max-width: 600px) {
+            section {
+                width: 95%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Part 1: List of Errors Found in Original Code
+
+    Error 1 (Line 7): CSS comment used HTML comment syntax.
+    Error 2 (Line 9): list-style-type: no should be none.
+    Error 3 (Line 14-15): Link pseudo-class order was incorrect.
+    Error 4 (Line 17): overlined should be overline.
+    Error 5 (Line 18): Missing colon after color.
+    Error 6 (Line 19-20): ID selector #intro did not match class="intro".
+    Error 7 (Line 21): Missing closing brace for the #intro rule.
+    Error 8 (Line 22): highlight should be a class selector (.highlight).
+    Error 9 (Line 34): Menu link should use href="#menu".
+    Error 10 (Line 42 and 46): Duplicate article IDs should not be used.
+    Error 11 (Line 53): Video element was missing the controls attribute.
+    Error 12 (Line 54): Video MIME type should be video/mp4.
+
+    -->
+
+    <!-- Header Section -->
+    <header>
+        <h1>e-Café Campus</h1>
+        <p>Fresh Coffee, Delicious Food, Happy Students!</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="#feedback">Feedback</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Menu Section -->
+    <section id="menu">
+
+        <h2>Today's Menu</h2>
+
+        <p class="intro">
+            Freshly brewed coffee and local delights every day.
+            Visit our café and enjoy delicious food at affordable prices!
+        </p>
+
+        <!-- Menu Item 1 -->
+        <article class="item">
+
+            <h3>Kopi Tarik</h3>
+
+            <p>
+                Enjoy our delicious traditional Malaysian coffee.
+            </p>
+
+            <p>
+                Promotion:
+                <span class="old-price">RM 4.50</span>
+                <span class="highlight">RM 3.50</span>
+            </p>
+
+        </article>
+
+        <!-- Menu Item 2 -->
+        <article class="item">
+
+            <h3>Nasi Lemak</h3>
+
+            <p>
+                A traditional Malaysian favourite served with
+                sambal, anchovies, peanuts and egg.
+            </p>
+
+            <p>
+                Promotion:
+                <span class="old-price">RM 6.50</span>
+                <span class="highlight">RM 5.00</span>
+            </p>
+
+        </article>
+
+    </section>
+
+    <!-- Video Section -->
+    <section id="video">
+
+        <h2>Watch Our Café Story</h2>
+
+        <figure>
+
+            <video width="400" height="300" controls>
+
+                <source src="video/cafe.mp4" type="video/mp4">
+
+               
+
+            </video>
+
+            <figcaption class="caption">
+                Discover our café, delicious menu and
+                favourite drinks on campus.
+            </figcaption>
+
+        </figure>
+
+    </section>
+
+    <!-- Feedback Section -->
+    <section id="feedback">
+
+        <h2>Customer Feedback Form</h2>
+
+        <p>
+            We would love to hear about your experience!
+            Please complete the form below.
+        </p>
+
+        <form class="feedback-form" action="#" method="post">
+
+            <!-- Name Field -->
+            <label for="name">Name:</label>
+
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required
+            >
+
+            <!-- Email Field -->
+            <label for="email">E-mail:</label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your e-mail"
+                required
+            >
+
+            <!-- Visit Type -->
+            <fieldset>
+
+                <legend>Visit Type:</legend>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="visit_type"
+                        value="Dine-in"
+                        required
+                    >
+                    Dine-in
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="visit_type"
+                        value="Take-away"
+                    >
+                    Take-away
+                </label>
+
+            </fieldset>
+
+            <!-- Favourite Items -->
+            <fieldset>
+
+                <legend>Favourite Items:</legend>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        name="favourite"
+                        value="Kopi Tarik"
+                    >
+                    Kopi Tarik
+                </label>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        name="favourite"
+                        value="Nasi Lemak"
+                    >
+                    Nasi Lemak
+                </label>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        name="favourite"
+                        value="Tea"
+                    >
+                    Tea
+                </label>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        name="favourite"
+                        value="Sandwich"
+                    >
+                    Sandwich
+                </label>
+
+            </fieldset>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit Feedback</button>
+
+        </form>
+
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="contact">
+
+        <p>&copy; 2026 e-Café Campus. All Rights Reserved.</p>
+
+        <address>
+            Contact us:
+            <a href="mailto:ecafe@example.com">
+                ecafe@example.com
+            </a>
+        </address>
+
+    </footer>
+
+</body>
+</html>
