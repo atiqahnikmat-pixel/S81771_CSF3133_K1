@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Campus Bookstore</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Roboto Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Merriweather Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap"
+          rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="shop.css">
+
+</head>
+
+<body>
+
+    <!--
+    ERROR IDENTIFICATION (Original Given Code)
+
+    1. shop.html, Line 7:
+       Incorrect rel="stylesheets".
+       Corrected to rel="stylesheet".
+
+    2. shop.html, Line 10-12:
+       Internal CSS was placed inside the body.
+       Moved the style rules into the CSS file.
+
+    3. shop.html, Line 18:
+       Incorrect inline CSS syntax: color=#1B4F72.
+       Corrected by using CSS property syntax.
+
+    4. shop.css, Line 2:
+       Font name "Robotto" was incorrect.
+       Corrected to "Roboto".
+
+    5. shop.css, Line 4:
+       Incorrect background-repeat value "no repeat".
+       Corrected to "no-repeat".
+
+    6. shop.css, Line 5:
+       Typo "bacground-position".
+       Corrected to "background-position".
+
+    7. shop.css, Line 18:
+       Navigation link used display:inline.
+       Corrected to display:block.
+
+    8. shop.css, Line 23:
+       Incorrect hover selector li:a:hover.
+       Corrected to li a:hover.
+
+    9. shop.css, Line 26:
+       CSS selector #products did not match HTML id="product".
+       Corrected to #product.
+
+    10. shop.css, Line 27:
+        Incorrect border-collapse value "collapsed".
+        Corrected to "collapse".
+
+    11. shop.css, Line 34:
+        Used nth-child(2) instead of nth-child(even).
+        Corrected to style alternating rows.
+
+    12. shop.css, Line 37:
+        Incorrect pseudo-class :hovered.
+        Corrected to :hover.
+
+    13. shop.css, Line 45:
+        Missing semicolon after background-color.
+        Added the missing semicolon.
+    -->
+
+    <!-- HEADER -->
+    <header id="home">
+        <h1>Campus Bookstore</h1>
+        <p>Textbooks, stationery and more for every student.</p>
+    </header>
+
+    <!-- NAVIGATION BAR -->
+    <nav>
+        <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#books">Books</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <section id="books">
+
+            <h2>Welcome to Campus Bookstore</h2>
+
+            <p>
+                Welcome to Campus Bookstore! We provide a wide range
+                of textbooks, stationery and gadgets to support
+                students in their academic journey.
+            </p>
+
+            <p>
+                Students can find affordable learning materials
+                and essential stationery for their daily studies.
+                Visit our bookstore and explore our products today!
+            </p>
+
+            <h2>Our Products</h2>
+
+            <!-- PRODUCT TABLE -->
+            <table id="product">
+
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Category</th>
+                        <th>Price (RM)</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Web Design Basics</td>
+                        <td>Textbook</td>
+                        <td class="price">45.00</td>
+                    </tr>
+
+                    <tr>
+                        <td>A4 Notebook</td>
+                        <td>Stationery</td>
+                        <td class="price">6.50</td>
+                    </tr>
+
+                    <tr>
+                        <td>USB Drive 32GB</td>
+                        <td>Gadget</td>
+                        <td class="price">25.00</td>
+                    </tr>
+
+                    <tr>
+                        <td>Highlighter Set</td>
+                        <td>Stationery</td>
+                        <td class="price">9.90</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="contact">
+        <p>&copy; 2026 Campus Bookstore. All Rights Reserved.</p>
+        <p>Contact: campusbookstore@email.com</p>
+    </footer>
+
+</body>
+
+</html>

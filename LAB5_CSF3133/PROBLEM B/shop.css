@@ -1,0 +1,201 @@
+
+/* =====================================
+   GENERAL PAGE SETTINGS
+===================================== */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #F2F2F2;
+    color: #333;
+}
+
+
+/* =====================================
+   HEADER WITH BACKGROUND IMAGE
+===================================== */
+
+header {
+    background-image: url("image/books.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    background-color: #1B4F72;
+    color: white;
+    text-align: center;
+    padding: 55px 20px;
+}
+
+header h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 16px;
+    text-align: center;
+}
+
+
+/* =====================================
+   NAVIGATION BAR
+===================================== */
+
+nav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+}
+
+/* Navigation hover effect */
+nav ul li a:hover {
+    background-color: #111;
+}
+
+/* Active navigation link */
+nav ul li a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+
+/* =====================================
+   MAIN CONTENT
+===================================== */
+
+main {
+    width: 90%;
+    max-width: 980px;
+    margin: 25px auto;
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+/* Heading style */
+h2 {
+    font-family: 'Merriweather', serif;
+    color: #1B4F72;
+    border-left: 4px solid #E67E22;
+    padding-left: 10px;
+}
+
+/* Paragraph style */
+p {
+    line-height: 1.6;
+    font-size: 14px;
+    text-align: justify;
+}
+
+
+/* =====================================
+   PRODUCT TABLE
+===================================== */
+
+#product {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 15px;
+}
+
+/* Table borders and padding */
+#product td,
+#product th {
+    border: 1px solid #ddd;
+    padding: 12px;
+}
+
+/* Table header */
+#product th {
+    background-color: #1B4F72;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+/* Alternating row colours */
+#product tbody tr:nth-child(even) {
+    background-color: #F2F2F2;
+}
+
+/* Table hover effect */
+#product tbody tr:hover {
+    background-color: #ddd;
+}
+
+/* Align price to the right */
+#product .price {
+    text-align: right;
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+    background-color: #EFE6D8;
+    color: #333;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+footer p {
+    text-align: center;
+    font-size: 13px;
+}
+
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media screen and (max-width: 600px) {
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    nav ul li a {
+        padding: 12px 14px;
+        font-size: 13px;
+    }
+
+    main {
+        width: 95%;
+        padding: 12px;
+    }
+
+    #product th,
+    #product td {
+        padding: 8px 5px;
+        font-size: 12px;
+    }
+
+}
