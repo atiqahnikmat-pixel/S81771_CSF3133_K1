@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Knowledge Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-content">
+            <p class="eyebrow">INTERACTIVE LEARNING</p>
+            <h1>General Knowledge Quiz</h1>
+            <p class="subtitle">
+                Test what you know, one question at a time.
+            </p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="quiz-card">
+
+            <!-- Start Screen -->
+            <div id="start-screen" class="screen">
+                <div class="start-icon">?</div>
+                <h2>Ready to begin?</h2>
+                <p>
+                    You will answer 5 multiple-choice questions.
+                    Each question has a 20-second time limit.
+                </p>
+                <button id="start-button" class="button button-primary">
+                    Start Quiz
+                </button>
+            </div>
+
+            <!-- Quiz Screen -->
+            <div id="quiz-screen" class="screen hidden">
+
+                <div class="quiz-topline">
+                    <span id="question-counter">Question 1 of 5</span>
+                    <span class="timer" id="timer">20s</span>
+                </div>
+
+                <div class="progress-track">
+                    <div id="progress-bar" class="progress-bar"></div>
+                </div>
+
+                <h2 id="question-text" class="question-text">
+                    Question goes here
+                </h2>
+
+                <div id="answer-options" class="answer-options"></div>
+
+                <p id="feedback" class="feedback"></p>
+
+                <div class="actions">
+                    <button id="submit-button" class="button button-primary">
+                        Submit Answer
+                    </button>
+
+                    <button id="next-button"
+                        class="button button-primary hidden">
+                        Next Question
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Result Screen -->
+            <div id="result-screen" class="screen hidden">
+                <div class="result-icon">✓</div>
+
+                <h2>Quiz Completed!</h2>
+
+                <p class="result-label">Your final score</p>
+
+                <p id="final-score" class="final-score">0 / 5</p>
+
+                <p id="result-message" class="result-message"></p>
+
+                <button id="restart-button"
+                    class="button button-primary">
+                    Try Again
+                </button>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>General Knowledge Quiz - HTML, CSS & JavaScript</p>
+    </footer>
+
+</body>
+</html>
