@@ -1,0 +1,398 @@
+
+/* General page styles */
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --navy: #17324d;
+    --blue: #236b91;
+    --ink: #203044;
+    --muted: #718096;
+    --line: #e3eaf0;
+    --page: #f3f7fa;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    color: var(--ink);
+    background: var(--page);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header */
+.site-header {
+    padding: 42px 20px 48px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(
+        125deg, #17324d, #236b91
+    );
+}
+
+.site-header h1 {
+    margin: 8px 0;
+    font-size: clamp(30px, 5vw, 46px);
+}
+
+.site-header p:last-child {
+    margin-bottom: 0;
+    color: #e0edf5;
+}
+
+.eyebrow {
+    margin: 0 0 7px;
+    color: #c7e5f4;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.eyebrow.dark {
+    color: var(--blue);
+}
+
+/* Main layout */
+.container {
+    width: min(100% - 32px, 960px);
+    margin: -22px auto 42px;
+}
+
+.panel {
+    margin-bottom: 18px;
+    padding: 25px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: white;
+    box-shadow: 0 8px 24px rgba(25, 53, 77, .06);
+}
+
+h2 {
+    margin: 0 0 18px;
+    font-size: 21px;
+}
+
+/* Player name input */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.start-row {
+    display: flex;
+    gap: 10px;
+}
+
+input[type="text"] {
+    flex: 1;
+    min-width: 0;
+    min-height: 42px;
+    padding: 10px 12px;
+    border: 1px solid #cbd6df;
+    border-radius: 8px;
+    font: inherit;
+}
+
+input[type="text"]:focus {
+    outline: 3px solid #dcebf3;
+    border-color: var(--blue);
+}
+
+.welcome {
+    margin: 13px 0 4px;
+    color: var(--blue);
+    font-weight: 700;
+}
+
+.muted {
+    margin: 0;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* Buttons */
+.button {
+    min-height: 42px;
+    padding: 10px 17px;
+    border: 0;
+    border-radius: 8px;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .2s, transform .2s;
+}
+
+.button:hover,
+.choice-button:hover {
+    transform: translateY(-2px);
+}
+
+.primary,
+.secondary {
+    color: white;
+    background: var(--blue);
+}
+
+.primary:hover,
+.secondary:hover {
+    background: #174d70;
+}
+
+.outline {
+    color: #174d70;
+    border: 1px solid #b9cbd8;
+    background: white;
+}
+
+.outline:hover {
+    background: #f0f6fa;
+}
+
+/* Section heading */
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.section-heading h2 {
+    margin: 0;
+}
+
+.pill {
+    padding: 8px 12px;
+    border-radius: 30px;
+    color: #236b91;
+    background: #edf6fa;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* Game choice buttons */
+.choices {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.choice-button {
+    display: flex;
+    min-height: 105px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1px solid #d9e5ed;
+    border-radius: 12px;
+    color: var(--navy);
+    background: #f8fbfd;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.choice-button:hover {
+    border-color: #8db5ca;
+    background: #edf6fa;
+}
+
+.choice-button span {
+    font-size: 32px;
+}
+
+/* Player and computer images */
+.versus-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(20px, 7vw, 75px);
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+}
+
+.contestant {
+    min-width: 130px;
+    text-align: center;
+}
+
+.contestant-label {
+    margin: 0 0 10px;
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.contestant img {
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    object-fit: contain;
+    border-radius: 16px;
+    background: #f1f6f9;
+}
+
+.choice-caption {
+    margin: 9px 0 0;
+    color: var(--muted);
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+.versus {
+    color: #a0acb7;
+    font-size: 16px;
+}
+
+/* Result and scoreboard */
+.result {
+    margin: 0 0 18px;
+    padding: 13px 15px;
+    border-radius: 9px;
+    color: #737d89;
+    background: #f2f4f6;
+    font-weight: 700;
+    text-align: center;
+}
+
+.score-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 17px 10px;
+    border-radius: 10px;
+}
+
+.score b {
+    font-size: 27px;
+}
+
+.score span {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.win {
+    color: #168451;
+    background: #eaf7f0;
+}
+
+.loss {
+    color: #c43d4b;
+    background: #fff0f1;
+}
+
+.draw {
+    color: #687483;
+    background: #f0f3f6;
+}
+
+/* History table */
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+th, td {
+    padding: 12px 14px;
+    border: 1px solid #dce5ec;
+    text-align: center;
+}
+
+th {
+    color: white;
+    background: var(--navy);
+}
+
+tbody tr:nth-child(even) {
+    background: #f6f9fb;
+}
+
+.result-win {
+    color: #168451;
+    font-weight: 700;
+}
+
+.result-lose {
+    color: #c43d4b;
+    font-weight: 700;
+}
+
+.result-draw {
+    color: #737d89;
+    font-weight: 700;
+}
+
+.summary {
+    margin: 16px 0 0;
+    color: #174d70;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+/* Footer */
+footer {
+    padding: 0 16px 24px;
+    color: var(--muted);
+    font-size: 12px;
+    text-align: center;
+}
+
+/* Mobile responsive design */
+@media (max-width: 600px) {
+
+    .start-row,
+    .section-heading {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .start-row .button {
+        width: 100%;
+    }
+
+    .versus-area {
+        gap: 12px;
+    }
+
+    .contestant {
+        min-width: 0;
+        flex: 1;
+    }
+
+    .contestant img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .actions .button {
+        flex: 1;
+    }
+}

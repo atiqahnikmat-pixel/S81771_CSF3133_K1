@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Grade Calculator</title>
+
+    <!-- Link CSS file -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Student Grade Calculator</h1>
+        <p>Calculate your grade based on your marks.</p>
+    </header>
+
+
+    <!-- Main Container -->
+    <main class="container">
+
+        <!-- Student Form Section -->
+        <section class="card">
+
+            <h2>Student Information</h2>
+
+            <form name="gradeForm" onsubmit="checkMark(event)">
+
+                <!-- Student Name -->
+                <label for="name">Student Name:</label>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter student name"
+                >
+
+
+                <!-- Student Mark -->
+                <label for="mark">Mark (0-100):</label>
+
+                <input
+                    type="text"
+                    id="mark"
+                    name="mark"
+                    placeholder="Enter mark"
+                >
+
+
+                <!-- Check Grade Button -->
+                <div class="button-group">
+
+                    <button type="submit" class="check-btn">
+                        Check Grade
+                    </button>
+
+                    <button
+                        type="button"
+                        class="random-btn"
+                        onclick="randomMark()"
+                    >
+                        Random Mark
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+
+        <!-- Result Section -->
+        <section class="card result-card">
+
+            <h2>Student Result</h2>
+
+            <p id="result">
+                Your result will appear here.
+            </p>
+
+            <p id="checkTime"></p>
+
+        </section>
+
+
+        <!-- Grade Table Section -->
+        <section class="card">
+
+            <h2>Grade Classification</h2>
+
+            <button
+                type="button"
+                class="table-btn"
+                onclick="showTable()"
+            >
+                Show Grade Table
+            </button>
+
+            <div id="tableContainer"></div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2026 Student Grade Calculator</p>
+    </footer>
+
+
+    <!-- Link JavaScript file -->
+    <script src="grade.js"></script>
+
+</body>
+</html>

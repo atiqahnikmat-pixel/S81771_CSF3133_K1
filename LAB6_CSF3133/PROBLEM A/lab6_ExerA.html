@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <p class="eyebrow">COMPUTER SCIENCE CLUB</p>
+        <h1>Rock, Paper, Scissors</h1>
+        <p>Enter your name and challenge the computer.</p>
+    </header>
+
+    <main class="container">
+
+        <!-- Player name -->
+        <section class="panel">
+            <label for="playerName">Your name</label>
+
+            <div class="start-row">
+                <input type="text" id="playerName"
+                    placeholder="Enter your name">
+
+                <button class="button primary"
+                    onclick="startGame()">
+                    Start Game
+                </button>
+            </div>
+
+            <p id="welcome" class="welcome">
+                Enter your name to begin.
+            </p>
+
+            <p id="startTime" class="muted"></p>
+        </section>
+
+        <!-- Game choices -->
+        <section class="panel">
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow dark">MAKE YOUR MOVE</p>
+                    <h2>Choose your weapon</h2>
+                </div>
+
+                <span id="roundCount" class="pill">
+                    0 rounds played
+                </span>
+            </div>
+
+            <div class="choices">
+
+                <button class="choice-button"
+                    onclick="playRound('rock')">
+                    <span>✊</span>
+                    Rock
+                </button>
+
+                <button class="choice-button"
+                    onclick="playRound('paper')">
+                    <span>✋</span>
+                    Paper
+                </button>
+
+                <button class="choice-button"
+                    onclick="playRound('scissors')">
+                    <span>✌</span>
+                    Scissors
+                </button>
+
+            </div>
+
+            <!-- Player and computer images -->
+            <div class="versus-area">
+
+                <div class="contestant">
+                    <p class="contestant-label">YOU</p>
+
+                    <img id="playerImg"
+                        src="rock.png"
+                        alt="Your choice: rock">
+
+                    <p id="playerChoiceText"
+                        class="choice-caption">
+                        Waiting for your move
+                    </p>
+                </div>
+
+                <strong class="versus">VS</strong>
+
+                <div class="contestant">
+                    <p class="contestant-label">COMPUTER</p>
+
+                    <img id="computerImg"
+                        src="rock.png"
+                        alt="Computer choice: rock">
+
+                    <p id="computerChoiceText"
+                        class="choice-caption">
+                        Waiting for computer
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Scoreboard -->
+        <section class="panel">
+
+            <p class="eyebrow dark">YOUR PERFORMANCE</p>
+            <h2>Scoreboard</h2>
+
+            <p id="result" class="result">
+                Start the game to play your first round.
+            </p>
+
+            <div class="score-grid">
+
+                <div class="score win">
+                    <b id="wins">0</b>
+                    <span>Wins</span>
+                </div>
+
+                <div class="score loss">
+                    <b id="losses">0</b>
+                    <span>Losses</span>
+                </div>
+
+                <div class="score draw">
+                    <b id="draws">0</b>
+                    <span>Draws</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Round history -->
+        <section class="panel">
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow dark">GAME RECORD</p>
+                    <h2>Round History</h2>
+                </div>
+
+                <div class="actions">
+                    <button class="button secondary"
+                        onclick="showSummary()">
+                        Show Summary
+                    </button>
+
+                    <button class="button outline"
+                        onclick="resetGame()">
+                        Reset
+                    </button>
+                </div>
+            </div>
+
+            <div class="table-wrap">
+                <table id="history">
+
+                    <thead>
+                        <tr>
+                            <th>Round</th>
+                            <th>You</th>
+                            <th>Computer</th>
+                            <th>Result</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="historyBody"></tbody>
+
+                </table>
+            </div>
+
+            <p id="summary" class="summary"></p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Computer Science Club · Rock, Paper, Scissors</p>
+    </footer>
+
+    <script src="game.js"></script>
+
+</body>
+</html>
